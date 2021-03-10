@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <data>
+<variable
+    name="user"
+    type="com.omarmattr.mcc_firebase1.model.User" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:backgroundTint="@color/background_item"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:cardCornerRadius="@dimen/card_corner_radius_normal"
+        android:layout_marginHorizontal="@dimen/fragment_horizontal_margin_page"
+        android:layout_marginVertical="@dimen/fragment_margin_min">
+
+        <LinearLayout
+            android:backgroundTint="@color/background_item"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textAlignment="viewStart"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/fragment_horizontal_margin_normal"
+                android:fontFamily="@font/zahra_arabic"
+
+                android:text="@{user.address}"
+                android:textColor="@color/onPrimary"
+                android:textSize="22sp" />
+
+            <TextView
+                android:textAlignment="viewStart"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/fragment_horizontal_margin_normal"
+                android:fontFamily="@font/zahra_arabic"
+                android:text="@{user.number}"
+                android:textColor="@color/onPrimary"
+                android:textSize="22sp" />
+
+
+            <TextView
+                android:textAlignment="viewStart"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/fragment_horizontal_margin_normal"
+                android:fontFamily="@font/zahra_arabic"
+                android:text="@{user.name}"
+                android:textColor="@color/onPrimary"
+                android:textSize="22sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
